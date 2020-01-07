@@ -1,3 +1,8 @@
+//const isFizz = (number) => number % 3 === 0
+function isFizz(number) {return number%3 === 0}
+function isBuzz(number) {return number%5 === 0}
+function isFizzBuzz(number) {return isFizz(number) && isBuzz(number)}
+
 function FizzBuzz(number) {
     if (CallFizzBuzz(number)) return "FizzBuzz"
     if (CallFizz(number)) return "Fizz"
@@ -5,18 +10,3 @@ function FizzBuzz(number) {
     return number
 }
 module.exports = FizzBuzz //จะประกาศ module ข้างล่าง function นั้น
-
-function CallFizz(number) {
-    if (number % 3 == 0) return true
-    return false
-}
-
-function CallBuzz(number) {
-    if (number % 5 == 0) return true
-    return false
-}
-
-function CallFizzBuzz(number) {
-    if (number % 3 == 0 && number % 5 == 0) return true
-    return false
-}
